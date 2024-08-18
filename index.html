@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Encriptador de texto</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img class="header_logo" src="/img/Logo.png" alt="Logo de Alura">
+      <img class="header_logo" src="/img/Logo.png" alt="Logo de Alura" />
     </header>
-    <section class="contenedor1">
-        <div class="contenedor1_texto">
-            <textarea class="contenedor1_texto_cajatexto" placeholder="Ingrese el texto aqui"></textarea>
-        </div>
+    <main class="contenedorfull">
+      <section class="contenedor1">
+        <textarea class="contenedor1_cajatexto" placeholder="Ingrese el texto aqui"></textarea>
         <div class="contenedor1_alerta">
-            <img src="/img/bi_exclamation-circle-fill.png" alt="Logo de Esclamacion Alerta">
-            <p>Solo letras minúsculas y sin acentos</p>
+          <img src="/img/bi_exclamation-circle-fill.png" alt="Logo de Esclamacion Alerta" />
+          <p class="contenedor1_alerta_p">Solo letras minúsculas y sin acentos</p>
         </div>
         <div class="contenedor1_botones">
-            <input class="contenedor_botones_encriptar" type="button" value="Encriptar">
-            <input class="contenedor_botones_desencriptar" type="button" value="Desencriptar">
+          <input class="contenedor_botones_encriptar" type="button" value="Encriptar"/>
+          <input class="contenedor_botones_desencriptar" type="button" value="Desencriptar"/>
         </div>
-    </section>
-    <section class="contenedor2">
-        <div class="contenedor2_imagen">
-            <img class="contenedor2_imagen_encriptar" src="/img/encriptar_1.jpg" alt="">
+      </section>
+      <section class="contenedor2">
+        <div class="contenedor2_derecha">
+          <img class="contenedor2_derecha_imagen" src="/img/encriptar.png" alt="imagen de encriptacion"/>
+          <h1>Ningún mensaje fue encontrado</h1>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
-        <div class="contenedor2_texto">
-            <h1>Ningún mensaje fue encontrado</h1>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
-        <div class="contenedor2_boton">
-            <input class="contenedor2_boton_copiar" type="button" value="Copiar">
-        </div>
-        <div class="contenedor2_resultado">
-            <p class="contenedor2_resultado_parrafo"></p>
-        </div>
-    </section>
-</body>
+        <textarea
+          class="contenedor2_derecha_evaluar" type="mensaje" readonly></textarea>
+        <input class="contenedor2_derecha_copiar" type="button" value="Copiar"/>
+      </section>
+    </main>
+    <footer>
+      <p class="copyright"> &copy; copyright 2024 - Desarrollado por TitopDev</p>
+    </footer>
+  </body>
 </html>

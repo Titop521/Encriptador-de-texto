@@ -1,190 +1,200 @@
-*{
-    margin: 0;
-    padding: 0
-    ;
+/*  Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Variables 
+
+:root{
+   
 }
 
-body {
-    background-color: #f4f4fc;
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #F3F5FC;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  width: 100rw;
 }
 
 header{
-    width: 100%;
-    height: 70px;
+  position: absolute;
+  margin: 40px 0px 0px 40px;
 }
 
-.header_logo {
-    width: 100px;
-    display: flex;
-    padding-top: 40px;
-    padding-left: 40px;
-    
+.header_logo{
+  display: flex;
+  align-items: flex-start;
+  width: 120px;
+  height: 48px;
+}
+
+.contenedorfull{
+  display: flex;
+  flex-direction: row;
 }
 
 .contenedor1{
-    display: flex;
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    justify-content: space-between;
+  width: 60%;
+  margin: 168px 0px 0px 140px;
 }
 
-.contenedor1_texto {
-    position: absolute;
-    top: 168px;
-    padding-left: 240px;
-    width: 100%;
-    height: 600px;
+.contenedor1_cajatexto{
+  width: 660px;
+  height: 288px;
+  background-color: #f4f4fc;
+  font-size: 32px;
+  color: #0A3871; 
+  border: none;
+  text-transform: lowercase;
 }
 
-.contenedor1_texto_cajatexto{
-    width: 80%;
-    height: 100%;
-    border: none;
-    background-color: #f4f4fc;
-    cursor:pointer;
-    color: #0A3871;
-    font-size: 32px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+::placeholder{
+  color: #0A3871;
 }
 
-.contenedor1_texto_cajatexto::placeholder{
-    color: #0A3871;
+.contenedor1_cajatexto:focus{
+  outline: none;
 }
 
 .contenedor1_alerta{
-    position: absolute;
-    top: 851px;
-    left: 240px;
-    display: flex;
-    color: #0A3871;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  position: absolute;
+  top: 500px;
+}
+
+.contenedor1_alerta_p{
+  width: 100%;
+  font-size: 18px;
+  color: #495057
 }
 
 .contenedor1_botones{
-    position: absolute;
-    top: 885px;
-    height: 80px;
-    left: 240px;
-    padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: 526px;
 }
 
-.contenedor_botones_encriptar {
-    width: 328px;
-    height: 67px;
-    padding: 24px;
-    gap: 8px;
-    border-radius: 24px;
-    background-color: #0A3871;
-    color: #FFFFFF;
-    border: none;
-    font-size: 16px;
-    font-weight: 400;
-    margin-right: 20px;
+.contenedor_botones_encriptar{
+  width: 328px;
+  height: 67px;
+  padding: 24px;
+  background-color: #0A3871;
+  color: #E9ECF8;
+  font-size: 16px;
+  border-radius: 24px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
 }
 
 .contenedor_botones_desencriptar{
-    width: 328px;
-    height: 67px;
-    padding: 24px;
-    gap: 8px;
-    border-radius: 24px;
-    border-color: #0A3871;
-    border: 1px solid #0A3871;
-    background-color: #D8DFE8;
-    color: #0A3871;
-    font-size: 16px;
-    font-weight: 400;
-    margin-right: 20px;
+  width: 328px;
+  height: 67px;
+  padding: 24px;
+  background-color: #D8DFE8;
+  color:#0A3871;
+  font-size: 16px;
+  border-radius: 24px;
+  border: 1px solid #0A3871;
 }
+
+/* Seccion 2 */
 
 .contenedor2{
-    display: block;
-    position: absolute;
-    width: 400px;
-    height: 940px;
-    right: 400px;
-    padding-right: 20px;
-    background-color:#352c2c;
-    box-sizing: border-box;
-    border-radius: 32px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
-
+  width: 270px;
+  height: 580px;
+  background-color:#FFFFFF;
+  border-radius: 32px;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
 }
 
-.contenedor2_imagen{
-    position: absolute;
-    left: 30px;
-    top: 180px;
-    box-sizing: border-box;
-    padding-top: 50px;
+.contenedor2_derecha{
+  width: 250px;
+  margin: auto;
+  margin-top: 50%;
+  background-color:#FFFFFF;
 }
 
-.contenedor2_imagen_encriptar{
-    width: 100%;
-    height: 100%;
+.contenedor2_derecha_imagen{
+  width: 100%;
+  background-color:#FFFFFF;
 }
 
-.contenedor2_texto{
-    position: absolute;
-    box-sizing: border-box;
-    top: 570px;
-    left: 40px;
+.contenedor2_derecha h1{
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #343A40;
+  background-color:#FFFFFF;
+  padding: 10%;
 }
 
-.contenedor2_texto h1{
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-    color: #343a40;
+.contenedor2_derecha p{
+  font-size: 12px;
+  color: #495057;
+  background-color:#FFFFFF;
+  text-align: center;
 }
 
-.contenedor2_texto p{
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    color: #495057;
-    padding-top: 20px;
+.contenedor2_derecha_evaluar{
+  width: 100%;
+  height: 485px;
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  color: #495057;
+  border: none;
+  resize: none;
+  background: transparent;
 }
 
-
-.contenedor2_boton{
-    display: flex;
-    position: absolute;
-    bottom: 400px;
-    top: 700px;
-    background-color: aqua;
-    padding-left: 40px;    
+contenedor2_derecha_evaluar:focus{
+  outline: none;
 }
 
-.contenedor2_boton_copiar{
-    width: 336px;
-    height: 67px;
-    border-radius: 24px;
-    background-color:#FFFFFF;
-    border: 1px solid #0A3871;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 24px;
-    gap: 8px;
-    top: 885px;
-    left: 1032px;
-    color: #0A3871;
-    
+.contenedor2_derecha_copiar{
+  width: 224px;
+  height: 67px;
+  margin: 23px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  padding: 24px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 24px;
+  border: 1px solid #0A3871;
+  background: #FFFFFF;
+  color: #0A3871;
+  cursor: pointer;
 }
 
-.contenedor2_resultado{
-    position: absolute;
-    bottom: 410px;
-    width: 320px;
-    height: 450px;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 25px;
-}
-
-.contenedor2_resultado_parrafo{
-    color: #495057;
-    font-size: 25px;
+.footer{
+  margin-top: 15px;
+  padding: 10px;
+  border-top: 2px solid #F3F5FC;
+  color: #343A40;
+  text-align: center;
+  height: 5px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
