@@ -187,7 +187,7 @@ contenedor2_derecha_evaluar:focus{
   cursor: pointer;
 }
 
-.footer{
+footer{
   margin-top: 15px;
   padding: 10px;
   border-top: 2px solid #F3F5FC;
@@ -198,3 +198,110 @@ contenedor2_derecha_evaluar:focus{
   font-weight: 700;
 }
 
+.linkedin, .github{
+  width: 3%;
+}
+
+.linkedin:hover{
+  color: #F3F5FC;
+  opacity: 0.80;
+  
+}
+
+.github:hover{
+  color: #F3F5FC;
+  opacity: 0.60;
+}
+
+/* Responsive */
+
+@media(max-width: 1250px) {
+  .contenedorfull{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contenedor1{
+    margin: 168px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contenedor1_botones{
+    display: flex;
+    align-items: center;
+    position: inherit; 
+  }
+
+  .contenedor1_alerta{
+    position: inherit;
+    margin: 15px;
+  }
+
+/* seccion 2 */
+
+  .contenedor2{
+    width: 665px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .contenedor2_derecha{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20%;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .contenedor2_derecha_imagen{
+    display: none;
+  }
+
+  .contenedor2_derecha_evaluar{
+    width: 100%;
+    height: 210px;
+    padding: 10px;
+  }
+
+  .contenedor2_derecha_copiar{
+    position: inherit;
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 720px) {
+  header .header_logo{
+    width: 100%;
+    background:#FFFFFF;
+    padding: 2px;
+  }
+
+  .contenedor1_cajatexto{
+    width: 90%;
+    font-size: 24px;
+  }
+
+  .contenedor1_botones{
+    display: grid;
+    gap: 21px;
+  }
+
+  .contenedor2{
+    width: 90%;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}
