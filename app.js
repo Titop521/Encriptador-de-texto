@@ -22,8 +22,8 @@ function botonEncriptar(){
     const textoEncriptado = encriptar(entradaTexto.value);
     salidaTexto.value = textoEncriptado;
     entradaTexto.value = "";
-    contendioSalida.remove();
-    // contendioSalida.style.display ="none";
+    // contendioSalida.remove();
+    contendioSalida.style.display ="none";
     botonCopiar.style.visibility = "inherit";
 }
 
@@ -48,7 +48,8 @@ function botonDesencriptar(){
     const textoEncriptado = desencriptar(entradaTexto.value);
     salidaTexto.value = textoEncriptado;
     entradaTexto.value = "";
-    contendioSalida.remove();
+    // contendioSalida.remove();
+    contendioSalida.style.display ="none";
     botonCopiar.style.visibility = "inherit";
 }
 
@@ -75,4 +76,6 @@ function copiar(){
     // document.execCommand("copy");
     alert("Texto copiado en el portapapeles");
     salidaTexto.value = "";
+    contendioSalida.style.display ="inline-block";
+    entradaTexto.focus();
 }
