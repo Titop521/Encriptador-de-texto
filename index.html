@@ -26,17 +26,8 @@
           </p>
         </div>
         <div class="contenedor1_botones">
-          <input
-            class="contenedor_botones_encriptar"
-            type="button"
-            value="Encriptar"
-            onclick= "encriptar()"
-          />
-          <input
-            class="contenedor_botones_desencriptar"
-            type="button"
-            value="Desencriptar"
-          />
+          <button class="contenedor_botones_encriptar" onclick="botonEncriptar()">Encriptar</button>
+          <button class="contenedor_botones_desencriptar" onclick="botonDesencriptar()" >Desencriptar</button>
         </div>
       </section>
       <section class="contenedor2">
@@ -58,6 +49,7 @@
           class="contenedor2_derecha_copiar"
           type="button"
           value="Copiar"
+          onclick="copiar()"
         />
       </section>
     </main>
