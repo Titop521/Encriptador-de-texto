@@ -30,8 +30,18 @@ body{
 }
 
 header{
+  display: flex;
   position: absolute;
   margin: 2.5rem 0rem 0rem 2.5rem;
+}
+
+header p{
+  display: flex;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: var(--color-righth1-footer);
+  font-size: 2rem;
+  font-weight:600;
 }
 
 .header_logo{
@@ -115,6 +125,12 @@ header{
   cursor: pointer;
 }
 
+.contenedor_botones_encriptar:active{
+  box-shadow: inset 2px 2px 4px var(--color-fondo);
+  inset: -3px -4px -8px var(--color-secundario);
+  color: var(--color-hover-dcptr);
+}
+
 .contenedor_botones_desencriptar{
   width: 20.5rem;
   height: 4.1875rem;
@@ -125,6 +141,12 @@ header{
   border-radius: 1.5rem;
   border: 0.063rem solid var(--color-secundario);
   cursor: pointer;
+}
+
+.contenedor_botones_desencriptar:active{
+  box-shadow: inset 2px 2px 4px var(--color-secundario);
+  inset: -3px -4px -8px var(--color-fondo);
+  color: var(--color-text);
 }
 
 /* Seccion 2 */
@@ -213,7 +235,7 @@ footer{
   color: var(--color-righth1-footer);
   text-align: center;
   height: 0.313rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 

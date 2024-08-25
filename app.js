@@ -13,18 +13,47 @@ La letra "u" es convertida para "ufat"
 
 const entradaTexto = document.querySelector(".contenedor1_cajatexto");
 const salidaTexto = document.querySelector(".contenedor2_derecha_evaluar");
-const contendioSalida = document.querySelector(".contenedor2_derecha");
+const contenidoSalida = document.querySelector(".contenedor2_derecha");
 const botonCopiar = document.querySelector(".contenedor2_derecha_copiar");
+const validacion = /[^\w\s]/g;
+
+// Validacion acentos o caracteres especiales 
+
+entradaTexto.addEventListener("input", function(){
+    const textoVerificar = entradaTexto.value;
+    if (validacion.test(textoVerificar)){
+        alert("El texto no debe contener acentos o caracteres especiales.");
+        entradaTexto.value = textoVerificar.replace(validacion,"");
+        entradaTexto.focus();
+    }return;
+})
 
 // Funcionalidad Boton Encriptar
 
-function botonEncriptar(){
-    const textoEncriptado = encriptar(entradaTexto.value);
+function botonEncriptar() {
+
+// elimina los espacios en blanco
+
+    const textoOriginal = entradaTexto.value.trim(); 
+        if (textoOriginal === "") {
+        alert("Por favor, ingrese un texto para encriptar.");
+        entradaTexto.focus();
+        return;
+        }
+
+    const textoEncriptado = encriptar(textoOriginal);
     salidaTexto.value = textoEncriptado;
     entradaTexto.value = "";
-    // contendioSalida.remove();
-    contendioSalida.style.display ="none";
-    botonCopiar.style.visibility = "inherit";
+
+// oculta la imagen y el texto
+
+    if (textoEncriptado) {
+        contenidoSalida.style.display = "none";
+        botonCopiar.style.visibility = "visible";
+    } else {
+        contenidoSalida.style.display = "block";
+        botonCopiar.style.visibility = "hidden";        
+    }
 }
 
 
@@ -44,13 +73,31 @@ function encriptar(stringEncriptado){
 
 // Funcionalidad Boton Desencriptar
 
-function botonDesencriptar(){
-    const textoEncriptado = desencriptar(entradaTexto.value);
-    salidaTexto.value = textoEncriptado;
+function botonDesencriptar() {
+    
+// elimina los espacios en blanco
+
+    const textoOriginal = entradaTexto.value.trim(); 
+    if (textoOriginal === "") {
+        alert("Por favor, ingrese un texto para desencriptar.");
+        entradaTexto.focus();
+        return;
+        }
+
+    const textoDesencriptado = desencriptar(textoOriginal);
+    salidaTexto.value = textoDesencriptado;
     entradaTexto.value = "";
-    // contendioSalida.remove();
-    contendioSalida.style.display ="none";
-    botonCopiar.style.visibility = "inherit";
+
+// oculta la imagen y el texto
+
+    if (textoDesencriptado) {
+        contenidoSalida.style.display = "none";
+        botonCopiar.style.visibility = "visible";
+        } else {
+        contenidoSalida.style.display = "block";
+        botonCopiar.style.visibility = "hidden";
+        
+     }
 }
 
 // funcion de desencriptar
@@ -69,13 +116,20 @@ function desencriptar(stringDesencriptado){
 
 // Funcionalidad Boton Encriptar
 
-function copiar(){
-    const textoCopiado = salidaTexto;
-    navigator.clipboard.writeText(salidaTexto.value);
-    // textoCopiado.select();
-    // document.execCommand("copy");
-    alert("Texto copiado en el portapapeles");
-    salidaTexto.value = "";
-    contendioSalida.style.display ="inline-block";
-    entradaTexto.focus();
-}
+function copiar() {
+    // Copia el texto al portapapeles
+    navigator.clipboard.writeText(salidaTexto.value)
+        .then(() => {
+            alert("Texto copiado en el portapapeles");
+
+            // Restablece los campos iniciales
+
+            salidaTexto.value = "";
+            entradaTexto.value = "";
+            contenidoSalida.style.display = "block";
+            botonCopiar.style.visibility = "hidden";
+
+            // Devuelve el foco al textarea
+            entradaTexto.focus();
+        })
+    }
